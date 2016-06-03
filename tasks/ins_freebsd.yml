@@ -1,0 +1,6 @@
+---
+- name: Freebsd Update pkg cache
+  shell: pkg update -f
+
+- name: Install Nginx on Freebsd
+  pkgng: name=nginx state=present

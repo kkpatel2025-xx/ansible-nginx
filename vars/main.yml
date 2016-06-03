@@ -1,0 +1,17 @@
+---
+
+###### Nginx Main Configuration
+
+nginxuser: www-data
+nginxworkerconnections : 768
+nginxkeepalivetimeout : 65 
+nginxaccesslog: /var/log/nginx/access.log  
+nginxerrorlog: /var/log/nginx/error.log
+
+###### Nginx Site Configuration  
+
+nginxport  : 80
+nginxservername: example.com
+nginxroot : /var/www/html
+nginxindex : index.html 
+

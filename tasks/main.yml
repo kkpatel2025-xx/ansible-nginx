@@ -1,0 +1,20 @@
+
+- include: ins_ubuntu.yml
+  when: ansible_distribution == 'Ubuntu'
+
+- include: ins_redhat.yml
+  when: ansible_os_family == 'RedHat'
+
+- include: ins_centos.yml
+  when: ansible_os_family == 'Centos'
+
+- include: ins_debian.yml
+  when: ansible_os_family == 'Debian'
+
+- include: ins_freebsd.yml
+  when: ansible_os_family == 'FreeBSD'
+
+- name: start nginx service
+  service: name=nginx state=started enabled=yes
+
+- include: config.yml 

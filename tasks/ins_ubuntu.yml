@@ -1,0 +1,5 @@
+- name: Add Nginx PPA
+  apt_repository: repo='ppa:nginx/stable'
+
+- name: Install Nginx  
+  apt: package=nginx state=present update_cache=yes

@@ -1,0 +1,6 @@
+---
+- name: Add Nginx repository 
+  template: src=redhat.repo dest=/etc/yum.repos.d/nginx.repo owner=root group=root mode=0644
+
+- name: Nginx Installation on Redhat 
+  yum: name=nginx state=installed 
