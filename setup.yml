@@ -1,7 +1,0 @@
----
- - name: Nginx Installation and Configuration 
-   hosts: all 
-   sudo: yes
-   roles: 
-      - ansible-nginx
-
